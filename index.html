@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villarosa Printing Service | Quality Printing Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: #f3f4f6;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-print text-amber-700 text-3xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-gray-800">
+                    <span class="text-amber-700">Villarosa</span> Printing Service
+                </h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Home</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Services</a>
+                <a href="#pricing" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Pricing</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-amber-700 font-medium">About</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-amber-700 font-medium">Contact</a>
+            </nav>
+            
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-md" id="mobile-menu">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-blue-500">Services</a>
+            <a href="#pricing" class="block py-2 text-gray-700 hover:text-blue-500">Pricing</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32 flex items-center">
+        <div class="container mx-auto px-4 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Quality Printing Services</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Professional printing solutions for all your needs. Fast, reliable, and affordable.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-lg font-medium transition duration-300">Our Services</a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-amber-700 px-8 py-3 rounded-lg font-medium transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Printing Services</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">We offer a comprehensive range of printing services to meet all your needs with the highest quality standards.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Xerox Service -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-amber-50 flex items-center justify-center">
+                        <i class="fas fa-copy text-amber-700 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Xerox Services</h3>
+                        <p class="text-gray-600 mb-4">High-quality photocopying services for documents of all sizes with various paper options.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Black & White Copies</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Color Copies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Printing Service -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-amber-50 flex items-center justify-center">
+                        <i class="fas fa-print text-amber-700 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Printing Services</h3>
+                        <p class="text-gray-600 mb-4">Professional printing for documents, flyers, brochures, and more with premium quality.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Document Printing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Laminate Service -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-amber-50 flex items-center justify-center">
+                        <i class="fas fa-layer-group text-amber-700 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lamination Services</h3>
+                        <p class="text-gray-600 mb-4">Protect your important documents with our high-quality lamination services.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Glossy & Matte Finish</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Various Thickness Options</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> ID Protection</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- ID Picture Service -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-amber-50 flex items-center justify-center">
+                        <i class="fas fa-id-card text-amber-700 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">ID Picture Services</h3>
+                        <p class="text-gray-600 mb-4">Professional ID photo services for passports, visas, school IDs, and more.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Multiple Sizes Available</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Instant Printing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-amber-700 mr-2"></i> Digital Copies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Pricing</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Affordable pricing for all our services with special discounts for regular customers.</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
+                    <thead class="bg-amber-700 text-white">
+                        <tr>
+                            <th class="py-4 px-6 text-left">Service</th>
+                            <th class="py-4 px-6 text-left">Description</th>
+                            <th class="py-4 px-6 text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="price-table">
+                        <!-- Xerox -->
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Xerox (B&W)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">Standard A4 size</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱2.00 - ₱5.00</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Xerox (Color)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">Standard A4 size</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱10.00 - ₱20.00</td>
+                        </tr>
+                        
+                        <!-- Printing -->
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Document Printing</td>
+                            <td class="py-4 px-6 border-b border-gray-200">Black & White</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱3.00 - ₱8.00</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Color Printing</td>
+                            <td class="py-4 px-6 border-b border-gray-200">High quality color</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱15.00 - ₱30.00</td>
+                        </tr>
+                        
+                        <!-- Lamination -->
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Lamination (Small)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">ID size or smaller</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱15.00</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">Lamination (A4)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">Standard document size</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱30.00</td>
+                        </tr>
+                        
+                        <!-- ID Pictures -->
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">ID Pictures (1x1)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">12 pieces with digital copy</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱49.00</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 border-b border-gray-200 font-medium">ID Pictures (2x2)</td>
+                            <td class="py-4 px-6 border-b border-gray-200">6 pieces with digital copy</td>
+                            <td class="py-4 px-6 border-b border-gray-200 text-right">₱49.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 mb-4">*Prices may vary depending on paper quality and quantity. Contact us for bulk order discounts.</p>
+                <a href="#contact" class="inline-block bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-lg font-medium transition duration-300">Get a Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Printing Shop" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Villarosa Printing Service</h2>
+                    <div class="w-20 h-1 bg-amber-700 mb-6"></div>
+                    <p class="text-gray-600 mb-4">Established in 2025, Villarosa Printing Service has been providing top-quality printing solutions to individuals and businesses in our community.</p>
+                    <p class="text-gray-600 mb-6">We pride ourselves on using state-of-the-art printing equipment and premium materials to deliver exceptional results for every project, big or small.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Fast Turnaround</h4>
+                                <p class="text-gray-600">We understand time is valuable and strive to complete your orders promptly.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Quality Materials</h4>
+                                <p class="text-gray-600">We use only premium papers and inks to ensure your prints look professional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Customer Satisfaction</h4>
+                                <p class="text-gray-600">Your satisfaction is our priority. We work until you're happy with the results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Have questions or need a quote? Reach out to us through any of these channels.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Quick Contact via QR Code</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">Scan Our QR Code</h4>
+                        <p class="text-gray-500 mb-4">Quickly access our website, contact info, and services by scanning this QR code with your phone's camera.</p>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 inline-block">
+                            <!-- QR Code Placeholder - Replace with actual QR code image -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.villarosaprinting.com%0A%0AFor%20quick%20access%20to%3A%0A-%20Our%20website%0A-%20Service%20catalog%0A-%20Contact%20information%0A-%20Current%20promotions" 
+                                 alt="Website QR Code" 
+                                 class="w-40 h-40 border border-gray-200">
+                            <p class="text-sm text-gray-500 mt-2">Scan to visit our website and view services</p>
+                        </div>
+                        <div class="mt-4 p-3 bg-amber-50 rounded-lg">
+                            <h5 class="font-medium text-amber-800 mb-1">What you'll get:</h5>
+                            <ul class="text-sm text-amber-700 space-y-1">
+                                <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> Instant access to our website</li>
+                                <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> Full service catalog</li>
+                                <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> Contact details saved to your phone</li>
+                                <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> Current promotions and discounts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="lg:w-1/2 space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Address</h4>
+                                    <p class="text-gray-600">Blk 4 Lot 21 Phase 3 Villa Rosa Homes Brgy Estrella SPL Cp</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Phone</h4>
+                                    <p class="text-gray-600">0953 900 9475</p>
+                                    <p class="text-gray-600">0953 900 9475</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@villarosaprinting.com</p>
+                                    <p class="text-gray-600">support@villarosaprinting.com</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Find Us On Map</h3>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                            <!-- Placeholder for map -->
+                            <div class="w-full h-64 flex flex-col items-center justify-center bg-amber-50 text-amber-700 p-4 text-center">
+                                <i class="fas fa-map-marked-alt text-5xl mb-4"></i>
+                                <p class="font-bold">Villarosa Printing Service</p>
+                                <p>Blk 4 Lot 21 Phase 3</p>
+                                <p>Villa Rosa Homes</p>
+                                <p>Brgy Estrella, SPL Cp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:pr-4">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-print text-amber-700 mr-2"></i>
+                        Villarosa Printing
+                    </h3>
+                    <p class="text-gray-400 mb-6 md:mb-0">Your trusted partner for all printing needs since 2025. Quality printing solutions at affordable prices.</p>
+                </div>
+                
+                <div class="md:pl-4">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:pl-8">
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Xerox Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Printing Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Lamination</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">ID Pictures</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Villarosa Printing Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-amber-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
